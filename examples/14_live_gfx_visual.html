@@ -118,6 +118,29 @@
                 };
             };
         </script>
-        <script async type="text/javascript" src="14_live_gfx_visual.js"></script>
+        <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '14_live_gfx_visual.wasm.txt', true)
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function() {
+          Module.wasmBinary = xhr.response;
+          (function() {
+            var memoryInitializer = '14_live_gfx_visual.html.mem.txt';
+            if (typeof Module['locateFile'] === 'function') {
+              memoryInitializer = Module['locateFile'](memoryInitializer);
+            } else if (Module['memoryInitializerPrefixURL']) {
+              memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
+            }
+            var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
+            xhr.open('GET', memoryInitializer, true);
+            xhr.responseType = 'arraybuffer';
+            xhr.send(null)
+          })();
+          var script = document.createElement('script');
+          script.src = "14_live_gfx_visual.js";
+          document.body.appendChild(script);
+        };
+        xhr.send(null);
+        </script>
     </body>
 </html>
