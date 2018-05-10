@@ -45,13 +45,13 @@
     </head>
     <body>
         <hr/>
-        <figure style="overflow:visible;" id="spinner"><div class="spinner"></div><center style="margin-top:0.5em"><strong>emscripten</strong></center></figure>
-        <div class="emscripten" id="status">Downloading...</div>
-        <div class="emscripten">
-            <progress value="0" max="100" id="progress" hidden=1></progress>    
-        </div>
         <div class="emscripten_border">
             <canvas class="emscripten app" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+            <div class="emscripten" id="status">Downloading...</div>
+            <figure style="overflow:visible;" id="spinner"><div class="spinner"></div><center style="margin-top:0.5em"><strong>emscripten</strong></center></figure>
+            <div class="emscripten">
+                <progress value="0" max="100" id="progress" hidden=1></progress>    
+            </div>
         </div>
         <hr/>
         <script type='text/javascript'>
