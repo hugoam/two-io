@@ -11,6 +11,7 @@ mud is a c++ toolkit / quick application prototyping library
 ![sponza (.obj import)](media/04_sponza.png)
 
 # [character (animations)](examples/05_character.html)
+![character (animations)](media/05_character.png)
 
 # [particles](examples/06_particles.html)
 ![particles](media/06_particles.png)
@@ -23,9 +24,6 @@ mud is a c++ toolkit / quick application prototyping library
 
 # [live shader](examples/09_live_shader.html)
 ![live shader](media/09_live_shader.png)
-
-# [live ui](examples/13_live_ui.html)
-![live ui](media/13_live_ui.png)
 
 # [live graphics](examples/14_live_gfx.html)
 ![live graphics](media/14_live_gfx.png)
