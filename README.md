@@ -1,7 +1,7 @@
 # mud
 mud is a c++ toolkit / quick application prototyping library
 
-# [pbr materials](examples/03_materials.html)
+# [pbr materials](examples/03_materials_low.html)
 ![pbr materials](media/03_materials.png)
 
 # [lights](examples/04_lights.html)
