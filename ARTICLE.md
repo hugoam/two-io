@@ -1,4 +1,4 @@
-I am releasing [mud](https://github.com/hugoam/mud): an all-purpose c++ app prototyping library, focused towards live graphical apps and games, packed with features, still in experimental phase.
+I am open-sourcing [mud](https://github.com/hugoam/mud): an all-purpose c++ app prototyping library, focused towards live graphical apps and games, packed with features, still in experimental phase.
 
 ### TL;DR: c++ reflection, serialization, scripting, ui inspection on top of any c++ code, declarative UI and declarative graphics, and even a physically based rendering add-on
 
