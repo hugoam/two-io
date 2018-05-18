@@ -1,5 +1,6 @@
-# mud
-mud is a c++ toolkit / quick application prototyping library
+# [mud](https://github.com/hugoam/mud)
+[mud](https://github.com/hugoam/mud) is an all-purpose c++ app prototyping library, focused towards live graphical apps and games.  
+mud contains all the essential building blocks to develop lean c++ apps from scratch, providing [reflection](https://github.com/hugoam/mud#reflection) and low level [generic](https://github.com/hugoam/mud#generic-features) algorithms, an [immediate ui](https://github.com/hugoam/mud#ui) paradigm, and an immediate minimalistic and flexible [graphics renderer](https://github.com/hugoam/mud#graphics).
 
 # [pbr materials](examples/03_materials_low.html)
 ![pbr materials](media/03_materials.png)
