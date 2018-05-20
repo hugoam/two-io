@@ -1,9 +1,8 @@
 [mud](https://github.com/hugoam/mud) is a general purpose c++ library for rapid development of live graphical apps and games.  
-**mud** is really 6 small libraries/independent modules:
+**mud** is made of 6 small libraries/modules intended to be usable independently:
 - immediate **declarative UI** and **declarative graphics** blocks to bootstrap interactive applications in a few lines of code.
 - lower-level **c++ reflection**, **serialization**, **scripting**, and **ui inspection** blocks generically extend your c++ code.
-
-It even contains a visual scripting language, and a physically based rendering add-on.
+- additional components include a visual scripting language, and a physically based rendering add-on
 
 Try some live examples in the browser:
 # [pbr materials](examples/03_materials_low.html)
