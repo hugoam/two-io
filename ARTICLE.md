@@ -36,14 +36,7 @@ Try some live examples in the browser:
 # [live graphics (visual script)](examples/14_live_gfx_visual.html)
 ![live graphics (visual script)](media/14_live_gfx_visual.png)
 
-
 Links: [github](https://github.com/hugoam/mud) - [official page](https://hugoam.github.io/mud-io) - [twitter](https://twitter.com/hugoamnov) - [patreon]()
-
-## A screenshot:
-![live graphics](https://github.com/hugoam/mud-io/blob/master/media/14_live_gfx.png)
-
-## Another screenshot:
-![gltf](https://github.com/hugoam/mud-io/blob/master/media/07_gltf.png)
 
 ## What is it ?
 [mud](https://github.com/hugoam/mud) contains all the essential building blocks to develop lean c++ apps from scratch, providing [reflection](https://github.com/hugoam/mud#reflection), low level [generic](https://github.com/hugoam/mud#generic-features) algorithms, an [immediate ui](https://github.com/hugoam/mud#ui) paradigm, and an immediate minimalistic and flexible [graphics renderer](https://github.com/hugoam/mud#graphics).
