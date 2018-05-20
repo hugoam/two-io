@@ -1,26 +1,39 @@
-I am releasing [mud](https://github.com/hugoam/mud): an all-purpose c++ app prototyping library, focused towards live graphical apps and games, packed with features, still in experimental phase.
+I am open-sourcing [mud](https://github.com/hugoam/mud): an all-purpose c++ app prototyping library, focused towards live graphical apps and games, packed with features, still in experimental phase.
 
 ### TL;DR: c++ reflection, serialization, scripting, ui inspection on top of any c++ code, declarative UI and declarative graphics, and even a physically based rendering add-on
 
 Try some live examples in the browser:
-- [pbr materials](https://hugoam.github.io/mud-io/examples/03_materials_low.html)
-- [lights](https://hugoam.github.io/mud-io/examples/04_lights.html)
-- [sponza (.obj import)](https://hugoam.github.io/mud-io/examples/04_sponza.html)
-- [character (animations)](https://hugoam.github.io/mud-io/examples/05_character.html)
-- [particles](https://hugoam.github.io/mud-io/examples/06_particles.html)
-- [gltf](https://hugoam.github.io/mud-io/examples/07_gltf.html)
-- [sky (perez model)](https://hugoam.github.io/mud-io/examples/08_sky.html)
-- [live shader](https://hugoam.github.io/mud-io/examples/09_live_shader.html)
-- [live graphics](https://hugoam.github.io/mud-io/examples/14_live_gfx.html)
-- [live graphics (visual script)](https://hugoam.github.io/mud-io/examples/4_live_gfx_visual.html)
+# [pbr materials](examples/03_materials_low.html)
+![pbr materials](media/03_materials.png)
 
-Links: [github](https://github.com/hugoam/mud) - [official page](https://hugoam.github.io/mud-io) - [twitter](https://twitter.com/hugoamnov) - [patreon]()
+# [lights](examples/04_lights.html)
+![lights](media/04_lights.png)
 
-## A screenshot:
-![live graphics](https://github.com/hugoam/mud-io/blob/master/media/14_live_gfx.png)
+# [sponza (.obj import)](examples/04_sponza.html)
+![sponza (.obj import)](media/04_sponza.png)
 
-## Another screenshot:
-![gltf](https://github.com/hugoam/mud-io/blob/master/media/07_gltf.png)
+# [character (animations)](examples/05_character.html)
+![character (animations)](media/05_character.png)
+
+# [particles](examples/06_particles.html)
+![particles](media/06_particles.png)
+
+# [gltf](examples/07_gltf.html)
+![gltf](media/07_gltf.png)
+
+# [sky (perez model)](examples/08_sky.html)
+![sky (perez model)](media/08_sky.png)
+
+# [live shader](examples/09_live_shader.html)
+![live shader](media/09_live_shader.png)
+
+# [live graphics](examples/14_live_gfx.html)
+![live graphics](media/14_live_gfx.png)
+
+# [live graphics (visual script)](examples/14_live_gfx_visual.html)
+![live graphics (visual script)](media/14_live_gfx_visual.png)
+
+Links: [github repo](https://github.com/hugoam/mud) - [twitter](https://twitter.com/hugoamnov) - [patreon](https://www.patreon.com/libmud)
 
 ## What is it ?
 
