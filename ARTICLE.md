@@ -4,7 +4,7 @@
 - lower-level **c++ reflection**, **serialization**, **scripting**, and **ui inspection** blocks generically extend your c++ code.
 - additional components include a visual scripting language, and a physically based rendering add-on
 
-Try some live examples in the browser:
+Try some live examples in the browser (full description after the break):
 # [pbr materials](examples/03_materials_low.html)
 ![pbr materials](media/03_materials.png)
 
