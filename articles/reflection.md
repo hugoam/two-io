@@ -67,7 +67,7 @@ _func_ void bar(MyObject& object);
 ```
 Notice how this is a standard c++ definition, with some added [reflection hints](#hints): `_refl_` to reflect a class, `_constr_` to reflect a constructor, `_meth_` for a reflected method, and `_attr_` for a reflected attribute.
 
-Using these annotations, the reflection [generator](#generator) produces a couple of reflection files, which declares and registers [constructs](#constructs) using mud corresponding types: [functions](../src/obj/Reflect/Method.h), [types](../src/obj/Reflect/Meta.h), [classes](../src/obj/Reflect/Class.h), [class members](../src/obj/Reflect/Member.h), [class methods](../src/obj/Reflect/Method.h), [enums](../src/obj/Reflect/Enum.h).  
+Using these annotations, the reflection [generator](#generator) produces a couple of reflection files, which declares and registers [constructs](#constructs) using mud corresponding types: [functions](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h), [types](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Meta.h), [classes](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Class.h), [class members](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Member.h), [class methods](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h), [enums](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Enum.h).  
 
 ## Types
 Passing objects around in a **generic** fashion means we need to keep track of their type.
@@ -97,8 +97,8 @@ This allows to convert a pointer or reference to a `Shape` to an aptly typed gen
 ### Values and references
 Now that we have a way to identify an object type, we can start safely passing these objects around as *generic* **values** and **references** :  
 mud provides two constructs to represent generic objects :
-- a `Var` is a type-erased [value](../src/obj/Var.h), which can contain any object
-- a `Ref` is a type-erased [reference](../src/obj/Ref.h) to a value, which can be of any type
+- a `Var` is a type-erased [value](https://github.com/hugoam/mud/tree/master/src/obj/Var.h), which can contain any object
+- a `Ref` is a type-erased [reference](https://github.com/hugoam/mud/tree/master/src/obj/Ref.h) to a value, which can be of any type
 
 It's worth to note that **generic** *value types* are costly to pass around: as `Var` uses heap allocated memory to contain its objects, memory allocations happen each time one is created or copied.  
 As a consequence, and a good rule of thumb, when passing objects around, you should use `Ref` everywhere possible.
@@ -118,17 +118,17 @@ MyObject& bb = val<MyObject>(b);
 
 ### c++ constructs
 Each reflected c++ construct is represented by their respective type and objects :
-- the [function](../src/obj/Reflect/Method.h) class represents any c++ function: use it to [call](#call-a-function) the underlying c++ function with **generic** arguments
-- the [meta](../src/obj/Reflect/Meta.h) class represents any c++ type: use it to [create](#create-an-object) an object, [convert](#convert-an-object-to-a-string) an object to a string
-- the [class](../src/obj/Reflect/Class.h) class represents any c++ class: use it to [construct](#construct-an-object) an object,  to iterate a class **bases**, **members** or **methods**
-- the [member](../src/obj/Reflect/Member.h) class represents a c++ class member (see above): use it to [get](#get-a-member-value) or [set](#set-a-member-value) a **generic** value to this member
-- the [method](../src/obj/Reflect/Method.h) class represents a c++ class method (see above): use it to [call](#call-an-object-method) the underlying c++ method with **generic** arguments
-- the [enum](../src/obj/Reflect/Enum.h) class represents a c++ enum (scoped or not): use it to convert an index to its label, or a label to its index, or a label to its underlying value, etc...
+- the [function](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h) class represents any c++ function: use it to [call](#call-a-function) the underlying c++ function with **generic** arguments
+- the [meta](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Meta.h) class represents any c++ type: use it to [create](#create-an-object) an object, [convert](#convert-an-object-to-a-string) an object to a string
+- the [class](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Class.h) class represents any c++ class: use it to [construct](#construct-an-object) an object,  to iterate a class **bases**, **members** or **methods**
+- the [member](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Member.h) class represents a c++ class member (see above): use it to [get](#get-a-member-value) or [set](#set-a-member-value) a **generic** value to this member
+- the [method](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h) class represents a c++ class method (see above): use it to [call](#call-an-object-method) the underlying c++ method with **generic** arguments
+- the [enum](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Enum.h) class represents a c++ enum (scoped or not): use it to convert an index to its label, or a label to its index, or a label to its underlying value, etc...
 
 In general, you can retrieve or browse these construct in different ways:
 - you can retrieve it from the c++ construct by calling either of `function()`, `type()`, `meta()`, `cls()`, `member()`, `method()` with the construct as an argument
-- you can browse all of a [module](../src/obj/System/System.h) constructs, or retrieve on specifically by name
-- you can browse all of the [system](../src/obj/System/System.h) constructs, i.e. the sum of all constructs in all currently loaded modules
+- you can browse all of a [module](https://github.com/hugoam/mud/tree/master/src/obj/System/System.h) constructs, or retrieve on specifically by name
+- you can browse all of the [system](https://github.com/hugoam/mud/tree/master/src/obj/System/System.h) constructs, i.e. the sum of all constructs in all currently loaded modules
 
 ## Operations
 Here are the different operations enabled by the generic reflection primitives :  
@@ -136,14 +136,14 @@ Here are the different operations enabled by the generic reflection primitives :
 (*Note: In these examples retrieving the generic c++ construct and using it is done successively: in real code, these are most likely done in different locations.*)
 
 ### call a function
-Call any [function](../src/obj/Reflect/Method.h) object by passing an array of **generic** arguments (a vector of `Var`):
+Call any [function](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h) object by passing an array of **generic** arguments (a vector of `Var`):
 ```c++
 Function& func = function(foo); // retrieve the function
 Var result = func({ var(5) }); // call it with generic parameters
 ```
 
 ### construct an object (for classes)
-Call any [constructor](../src/obj/Reflect/Method.h), with an array of generic arguments:
+Call any [constructor](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h), with an array of generic arguments:
 ```c++
 Constructor& constr = cls<MyObject>().constructor(); // retrieve the main constructor
 Var object = constr({ var(12), var(string("cocorico")) }); // call it with generic parameters
@@ -157,21 +157,21 @@ Var value = meta<MyObject>().empty_var();
 ```
 
 ### call an object method
-Call any [method](../src/obj/Reflect/Method.h) with an array of generic arguments:
+Call any [method](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Method.h) with an array of generic arguments:
 ```c++
 Method& bar = method(&MyObject::bar); // retrieve the method
 Var result = bar(object, { var(12) }); // call it with generic parameters
 ```
 
 ### get a member value
-Get the generic value of any [member](../src/obj/Reflect/Member.h):
+Get the generic value of any [member](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Member.h):
 ```c++
 Member& colour = member(&MyObject::m_colour); // retrieve the member
 Var value = colour.get(object); // fetch its generic value from a generic object
 ```
 
 ### set a member value
-Set the generic value of any [member](../src/obj/Reflect/Member.h):
+Set the generic value of any [member](https://github.com/hugoam/mud/tree/master/src/obj/Reflect/Member.h):
 ```c++
 Member& name = member(&MyObject::m_name); // retrieve the member
 name.set(object, var(string("cocorico!"))); // set it on a generic object with a generic value
@@ -209,7 +209,7 @@ The following hints are defined for reflecting c++ constructs:
 When compiling, these are defined to nothing : they only have a meaning when run through the reflection generator.
 
 ### Precompiling
-Precompiling is done by the [reflection generator](../src/obj/Metagen/generator.py) : it's essentially a c++ AST parser, written in python over [libclang](https://github.com/llvm-mirror/clang/tree/master/tools/libclang) : it goes over all the headers in your module, and each time a [reflection hint](#hints) is found in the AST, the meta data is generated for the annotated construct.
+Precompiling is done by the [reflection generator](https://github.com/hugoam/mud/tree/master/src/obj/Metagen/generator.py) : it's essentially a c++ AST parser, written in python over [libclang](https://github.com/llvm-mirror/clang/tree/master/tools/libclang) : it goes over all the headers in your module, and each time a [reflection hint](#hints) is found in the AST, the meta data is generated for the annotated construct.
 
 The meta data is bundled into the following reflection files, added to a `Generated` folder :
 - a `Forward.h` file containing forward declarations for all types in your module
@@ -255,7 +255,7 @@ The scripting and visual scripting examples are good demonstrations of the power
 - [live graphics](https://hugoam.github.io/mud-io/examples/14_live_gfx.html)
 - [live graphics (visual script)](https://hugoam.github.io/mud-io/examples/14_live_gfx_visual.html)
 
-<br>![live graphics](https://github.com/hugoam/mud-io/blob/master/media/14_live_gfx.png)
+<br>![live graphics](../media/14_live_gfx.png)
 
 ## Going further
 In a later article, we will show an interesting application of this reflection model: we wrote a **typed** c++ representation of the [glTF](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0) format that generically serialize from and to the *glTF json format*. This eliminates more than half of the logic that is usually contained in glTF importers, and makes it the smallest and simplest it can possibly be (fitting in < 1kLoC).
