@@ -105,7 +105,7 @@ As a consequence, and a good rule of thumb, when passing objects around, you sho
 
 Creating a `Var` or `Ref` from a c++ objects is done like so :
 ```c++
-MyObject object = { 12, 'cocorico' };
+MyObject object = { 12, "cocorico" };
 Ref a = &object; // a holds generic reference to object
 Var b = var(object); // b holds a copy of object
 ```
